@@ -1,0 +1,90 @@
+.writing {
+  background: var(--black);
+  padding: 120px 60px;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  border-top: 1px solid var(--gray-3);
+  padding-top: 24px;
+  margin-bottom: 64px;
+}
+
+.number {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--blue);
+  letter-spacing: 0.1em;
+}
+
+.title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(40px, 5vw, 68px);
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 160px 1fr 40px;
+  gap: 40px;
+  align-items: center;
+  padding: 40px 0;
+  border-bottom: 1px solid var(--gray-2);
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.item:hover {
+  opacity: 1;
+}
+
+.tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.date {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--gray-4);
+}
+
+.postTitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.desc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--gray-5);
+  max-width: 600px;
+}
+
+.arrow {
+  font-size: 20px;
+  color: var(--gray-4);
+  transition: transform 0.3s, color 0.3s;
+  justify-self: end;
+}
+
+.item:hover .arrow {
+  transform: translate(4px, -4px);
+  color: var(--gold);
+}

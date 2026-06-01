@@ -1,0 +1,85 @@
+.contact {
+  background: var(--blue-deeper);
+  padding: 140px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(255, 209, 0, 0.08) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 24px;
+  margin-bottom: 56px;
+}
+
+.number {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+}
+
+.sectionTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(40px, 5vw, 68px);
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.headline {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(56px, 9vw, 128px);
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  color: var(--gold);
+  margin-bottom: 40px;
+}
+
+.sub {
+  font-size: 15px;
+  color: rgba(176, 196, 212, 0.8);
+  margin-bottom: 56px;
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+}
+
+.link {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--white);
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.link:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}

@@ -1,0 +1,131 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 60px 88px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 50%, rgba(39, 116, 174, 0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.bgText {
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  transform: translateY(-50%);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(160px, 20vw, 320px);
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(39, 116, 174, 0.12);
+  letter-spacing: -0.02em;
+  pointer-events: none;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.label {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.2s forwards;
+}
+
+.name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(72px, 10vw, 144px);
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.35s forwards;
+}
+
+.name span {
+  display: block;
+  color: var(--gold);
+}
+
+.sub {
+  margin-top: 36px;
+  max-width: 460px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--gray-5);
+  opacity: 0;
+  animation: fadeUp 0.8s 0.5s forwards;
+}
+
+.cta {
+  margin-top: 48px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.65s forwards;
+}
+
+.btnPrimary {
+  background: var(--gold);
+  color: var(--black);
+  padding: 14px 32px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btnPrimary:hover {
+  background: var(--gold-muted);
+  transform: translateY(-1px);
+}
+
+.btnSecondary {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gray-5);
+  transition: color 0.2s;
+}
+
+.btnSecondary:hover {
+  color: var(--gold);
+}
+
+.scroll {
+  position: absolute;
+  right: 60px;
+  bottom: 88px;
+  writing-mode: vertical-rl;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gray-4);
+  opacity: 0;
+  animation: fadeUp 0.8s 0.9s forwards;
+  z-index: 1;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
