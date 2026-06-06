@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://athp18.github.io/$1",
+      "permanent": true
+    }
+  ]
+}
