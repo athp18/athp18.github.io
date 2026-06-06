@@ -14,9 +14,20 @@ function renderText(text) {
   )
 }
 
+function renderParagraph(text) {
+  // Bold a leading label like "Stack:" or "Thread pool." if it's short (<= 40 chars)
+  const m = text.match(/^([A-Z][A-Za-z /+]{0,38}[:.])\s/)
+  if (m) {
+    const label = m[1]
+    const rest = text.slice(label.length + 1)
+    return <><strong>{label}</strong>{' '}{renderText(rest)}</>
+  }
+  return renderText(text)
+}
+
 function renderParagraphs(text) {
   return text.split('\n\n').map((para, i) => (
-    <p key={i}>{renderText(para)}</p>
+    <p key={i}>{renderParagraph(para)}</p>
   ))
 }
 
