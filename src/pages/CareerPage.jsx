@@ -3,7 +3,7 @@ import styles from './CareerPage.module.css'
 const jobs = [
   {
     company: 'Rivian VW Technologies',
-    title: 'Software Engineering Intern — Data Platform & AI',
+    title: 'Software Engineering Intern - Data Platform & AI',
     date: 'Jun 2025 – Sep 2025',
     current: true,
     bullets: [
@@ -14,7 +14,7 @@ const jobs = [
     tags: ['Kubernetes', 'Kafka', 'Datadog', 'AWS', 'KEDA'],
   },
   {
-    company: 'Stanford University — Llorente Lab',
+    company: 'Stanford University - Llorente Lab',
     title: 'Research Assistant',
     date: 'Jun 2023 – Sep 2024',
     current: false,
@@ -28,10 +28,10 @@ const jobs = [
 ]
 
 const skills = {
-  'Languages': ['Python', 'C++', 'Java', 'TypeScript', 'SQL', 'Bash', 'R'],
-  'Frontend / Backend': ['React', 'FastAPI', 'Django', 'Flask', 'PostgreSQL', 'MongoDB', 'Node.js'],
-  'Infrastructure': ['Kubernetes', 'Docker', 'AWS', 'Kafka', 'Jenkins', 'GCP', 'KEDA'],
-  'ML / Data': ['PyTorch', 'TensorFlow', 'OpenCV', 'NumPy', 'Pandas', 'Scanpy'],
+  'Languages': ['Python', 'C++', 'Java', 'TypeScript', 'SQL', 'Bash', 'R', 'JavaScript', 'C', 'Ruby', 'Matlab'],
+  'Frontend / Backend': ['React', 'Spring', 'FastAPI', 'Django', 'Flask', 'PostgreSQL', 'MongoDB', 'Node.js',],
+  'Infrastructure': ['Kubernetes', 'Docker', 'AWS', 'Kafka', 'Jenkins', 'GCP', 'Git'],
+  'ML / Data': ['PyTorch', 'TensorFlow', 'JAX', 'NumPy', 'Pandas', 'OpenCV'],
 }
 
 export default function CareerPage() {
