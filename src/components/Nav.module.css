@@ -70,9 +70,14 @@
   padding: 6px 8px;
   border-radius: 4px;
   line-height: 1;
-  transition: background 0.15s;
+  transition: background 0.15s, color 0.25s;
   display: flex;
   align-items: center;
+  color: var(--text-dark);
+}
+
+[data-theme="dark"] .themeToggle {
+  color: #ffffff;
 }
 
 .themeToggle:hover {
