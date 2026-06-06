@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
+import { Moon, Sun } from 'lucide-react'
 import styles from './Nav.module.css'
 
 const links = [
@@ -41,7 +42,7 @@ export default function Nav({ dark, onToggleDark }) {
           aria-label="Toggle dark mode"
           title={dark ? 'Switch to light mode' : 'Switch to dark mode'}
         >
-          {dark ? '☀️' : '🌙'}
+          {dark ? <Sun size={17} /> : <Moon size={17} />}
         </button>
       </div>
     </nav>
