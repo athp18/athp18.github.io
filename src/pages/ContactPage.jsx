@@ -10,9 +10,9 @@ import styles from './ContactPage.module.css'
 //   PUBLIC_KEY  — found in Account > API Keys
 // Your template should use variables: {{from_name}}, {{from_email}}, {{message}}
 // ─────────────────────────────────────────────────────────────
-const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID'
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'
-const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY'
+const EMAILJS_SERVICE_ID  = 'service_7z3poek'
+const EMAILJS_TEMPLATE_ID = 'template_pqhez7o'
+const EMAILJS_PUBLIC_KEY  = 'hWV30sQ3E3x0b-whe'
 
 export default function ContactPage() {
   const formRef = useRef(null)
