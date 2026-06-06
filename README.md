@@ -1,16 +1,65 @@
-# React + Vite
+# athp18.github.io
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site — [athp18.github.io](https://athp18.github.io)
 
-Currently, two official plugins are available:
+Built with React + Vite, styled after the [Jalpc](https://github.com/jarrekk/Jalpc) Jekyll theme, and deployed to GitHub Pages.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+- **React 19** + **Vite**
+- **React Router** (HashRouter for GH Pages compatibility)
+- **CSS Modules**
+- **EmailJS** for the contact form
+- **Open Sans** + **DM Mono** fonts via Fontsource
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Pages
 
-## Expanding the ESLint configuration
+| Route | Content |
+|---|---|
+| `/` | About — hero, bio, details |
+| `/#/career` | Career timeline + skills |
+| `/#/projects` | Project cards |
+| `/#/contact` | Contact form |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project structure
+
+```
+src/
+├── components/     # Nav, Footer, Icons
+├── hooks/          # useDarkMode
+├── pages/          # Home, CareerPage, ProjectsPage, ContactPage
+└── styles/         # global.css (CSS variables, dark mode)
+
+public/
+├── images/         # Headshot.jpg
+└── favicon.svg
+```
+
+## Local dev
+
+```bash
+npm install
+npm run dev
+```
+
+## Deploy
+
+Deploys to the `gh-pages` branch via:
+
+```bash
+npm run deploy
+```
+
+GitHub Pages is configured to serve from the `gh-pages` branch.
+
+## Contact form setup
+
+The contact form uses [EmailJS](https://www.emailjs.com). To activate it, fill in the three constants at the top of `src/pages/ContactPage.jsx`:
+
+```js
+const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID'
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'
+const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY'
+```
+
+Your EmailJS template should use the variables `{{from_name}}`, `{{from_email}}`, and `{{message}}`.

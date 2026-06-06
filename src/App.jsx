@@ -1,40 +1,26 @@
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import './styles/global.css'
+import { useDarkMode } from './hooks/useDarkMode'
 import Nav from './components/Nav'
-import Hero from './components/Hero'
-import About from './components/About'
-import Skills from './components/Skills'
-import Experience from './components/Experience'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
-import Writing from './components/Writing'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import CareerPage from './pages/CareerPage'
+import ProjectsPage from './pages/ProjectsPage'
+import ContactPage from './pages/ContactPage'
 
 export default function App() {
+  const [dark, toggleDark] = useDarkMode()
+
   return (
-    <>
-      <Nav />
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Writing />
-      <Contact />
-      <footer style={{
-        background: 'var(--black)',
-        padding: '28px 60px',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        fontFamily: "'DM Mono', monospace",
-        fontSize: '10px',
-        letterSpacing: '0.14em',
-        textTransform: 'uppercase',
-        color: 'var(--gray-4)',
-        borderTop: '1px solid var(--gray-2)',
-      }}>
-        <span>© 2026 Atharv Panditrao</span>
-        <span>Los Angeles, CA</span>
-      </footer>
-    </>
+    <HashRouter>
+      <Nav dark={dark} onToggleDark={toggleDark} />
+      <Routes>
+        <Route path="/"         element={<Home />} />
+        <Route path="/career"   element={<CareerPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/contact"  element={<ContactPage />} />
+      </Routes>
+      <Footer />
+    </HashRouter>
   )
 }

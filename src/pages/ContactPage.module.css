@@ -1,0 +1,138 @@
+.page {
+  padding-top: 60px;
+  padding-bottom: 80px;
+  background: var(--white);
+  transition: background 0.25s;
+  min-height: calc(100vh - 60px);
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* ── Two-column layout ────────────────────────── */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* ── Info panel ───────────────────────────────── */
+.info h3 {
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.info p {
+  color: var(--text);
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+.infoList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.infoKey {
+  display: inline-block;
+  width: 72px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* ── Form ─────────────────────────────────────── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 9px 12px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: var(--text-dark);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  outline: none;
+  transition: border-color 0.15s, background 0.25s;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--text);
+  opacity: 0.6;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--blue);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit {
+  align-self: flex-start;
+  padding: 10px 28px;
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.submit:hover:not(:disabled) {
+  background: var(--blue-dark);
+}
+
+.submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.successMsg {
+  font-size: 14px;
+  color: #27a560;
+}
+
+.errorMsg {
+  font-size: 14px;
+  color: #c0392b;
+}
+
+@media (max-width: 640px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}

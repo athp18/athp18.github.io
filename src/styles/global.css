@@ -1,10 +1,7 @@
-@import '@fontsource/bebas-neue';
-@import '@fontsource/dm-mono/300.css';
+@import '@fontsource/open-sans/300.css';
+@import '@fontsource/open-sans/400.css';
+@import '@fontsource/open-sans/600.css';
 @import '@fontsource/dm-mono/400.css';
-@import '@fontsource/dm-mono/500.css';
-@import '@fontsource/dm-sans/300.css';
-@import '@fontsource/dm-sans/400.css';
-@import '@fontsource/dm-sans/500.css';
 
 *, *::before, *::after {
   margin: 0;
@@ -12,41 +9,78 @@
   box-sizing: border-box;
 }
 
-:root {
-  --blue: #2774AE;
+/* ── Light mode (default) ──────────────────────── */
+:root,
+[data-theme="light"] {
+  --blue:      #2774AE;
   --blue-dark: #1a5a8e;
-  --blue-deeper: #0f3d61;
-  --gold: #FFD100;
-  --gold-muted: #e6bc00;
-  --black: #080c10;
-  --gray-1: #111620;
-  --gray-2: #1c2333;
-  --gray-3: #2e3a50;
-  --gray-4: #5a6a82;
-  --gray-5: #8a9ab5;
-  --gray-6: #b8c4d4;
-  --white: #f0f4f8;
+  --gold:      #FFD100;
+  --gold-dark: #b8960c;
+
+  --dark:      #2f4050;
+  --nav-bg:    rgba(243, 243, 244, 0.95);
+  --nav-border:#e7eaec;
+  --gray-bg:   #f3f3f4;
+  --card-bg:   #ffffff;
+  --border:    #e7eaec;
+  --text:      #676a6c;
+  --text-dark: #293846;
+  --white:     #ffffff;
 }
 
-html {
-  scroll-behavior: smooth;
+/* ── Dark mode ─────────────────────────────────── */
+[data-theme="dark"] {
+  --dark:      #141921;
+  --nav-bg:    rgba(22, 30, 42, 0.96);
+  --nav-border:#2d3a4a;
+  --gray-bg:   #1e2a38;
+  --card-bg:   #1e2a38;
+  --border:    #2d3a4a;
+  --text:      #8a9bb0;
+  --text-dark: #c8d6e5;
+  --white:     #161e2a;
 }
+
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--black);
-  color: var(--white);
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 300;
-  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--white);
   -webkit-font-smoothing: antialiased;
+  transition: background 0.25s, color 0.25s;
 }
 
 a {
-  color: inherit;
+  color: var(--blue);
   text-decoration: none;
+  transition: color 0.15s;
 }
 
-::selection {
-  background: var(--gold);
-  color: var(--black);
+a:hover { color: var(--blue-dark); }
+
+h1, h2 { font-weight: 100; }
+h3, h4, h5, h6 { font-weight: 600; }
+
+h1 { font-size: 30px; }
+h2 { font-size: 24px; }
+h3 { font-size: 16px; }
+
+/* Jalpc navy-line — UCLA gold */
+.navy-line {
+  width: 60px;
+  height: 0;
+  margin: 60px auto 0;
+  border-bottom: 2px solid var(--gold);
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-heading h1 {
+  margin-top: 10px;
+  color: var(--text-dark);
 }
