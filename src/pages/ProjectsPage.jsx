@@ -9,7 +9,7 @@ const projects = [
     stack: 'C++ · Sockets · Pthreads',
     tags: ['Systems', 'C++'],
     href: 'https://github.com/athp18/flashkv',
-    icon: '🗄️',
+    icon: '',
   },
   {
     title: 'Bay Area Pathfinder',
@@ -17,7 +17,7 @@ const projects = [
     stack: 'React · FastAPI · AWS · GNN · XGBoost',
     tags: ['Web', 'ML'],
     href: 'https://github.com/athp18/bay-area-pathfinder',
-    icon: '🗺️',
+    icon: '',
   },
   {
     title: 'BrewBuddy',
@@ -25,7 +25,7 @@ const projects = [
     stack: 'React Native · MongoDB · Node.js',
     tags: ['Mobile'],
     href: 'https://github.com/athp18/BrewBuddy',
-    icon: '☕',
+    icon: '',
   },
 ]
 
