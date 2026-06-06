@@ -2,6 +2,7 @@ import { useState } from 'react'
 import styles from './ProjectsPage.module.css'
 import TagFilter from '../components/TagFilter'
 import projects from '../data/projects'
+import { GitHubIcon } from '../components/Icons'
 
 const allTags = [...new Set(projects.flatMap(p => p.tags))]
 
@@ -32,7 +33,7 @@ export default function ProjectsPage() {
               <div key={p.slug} className={`${styles.card} ${isOpen ? styles.cardOpen : ''}`}>
                 {/* ── Card header (always visible) ── */}
                 <button className={styles.cardBtn} onClick={() => toggle(p.slug)} aria-expanded={isOpen}>
-                  <div className={styles.cardIcon}>{p.icon}</div>
+                  <div className={styles.cardIcon}><p.icon size={28} strokeWidth={1.5} color="var(--text)" /></div>
                   <div className={styles.cardBody}>
                     <div className={styles.cardTop}>
                       <h3 className={styles.cardTitle}>{p.title}</h3>
@@ -69,7 +70,9 @@ export default function ProjectsPage() {
                     </div>
 
                     <div className={styles.detailLinks}>
-                      <a href={p.github} target="_blank" rel="noreferrer" className={styles.btnOutline}>GitHub ↗</a>
+                      <a href={p.github} target="_blank" rel="noreferrer" className={styles.btnOutline} aria-label="GitHub">
+                        <GitHubIcon size={15} /> GitHub
+                      </a>
                       {p.live && (
                         <a href={p.live} target="_blank" rel="noreferrer" className={styles.btnPrimary}>Live Demo ↗</a>
                       )}

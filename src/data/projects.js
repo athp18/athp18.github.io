@@ -1,3 +1,5 @@
+import { Database, Navigation, Coffee, Search, Cpu } from 'lucide-react'
+
 const projects = [
   {
     slug: 'kv-store',
@@ -10,7 +12,7 @@ const projects = [
     github: 'https://github.com/athp18/flashkv',
     live: null,
     images: ['/images/flashkv.png'],
-    icon: '🗄️',
+    icon: Database,
   },
   {
     slug: 'bay-area-pathfinder',
@@ -23,7 +25,7 @@ const projects = [
     github: 'https://github.com/athp18/bay-area-pathfinder',
     live: null,
     images: [],
-    icon: '🗺️',
+    icon: Navigation,
   },
   {
     slug: 'brewbuddy',
@@ -36,7 +38,7 @@ const projects = [
     github: 'https://github.com/athp18/BrewBuddy',
     live: 'https://brew-buddy-client.vercel.app/',
     images: ['/images/BrewBuddy_img1.jpg', '/images/BrewBuddy_img2.png'],
-    icon: '☕',
+    icon: Coffee,
   },
   {
     slug: 'competitive-intelligence',
@@ -49,7 +51,7 @@ const projects = [
     github: 'https://github.com/athp18/competitive-intelligence',
     live: null,
     images: ['/images/CompIntelligence_1.png', '/images/CompIntelligence_2.png'],
-    icon: '🔍',
+    icon: Search,
   },
   {
     slug: 'llm-bench',
@@ -62,7 +64,7 @@ const projects = [
     github: 'https://github.com/athp18/llm_bench',
     live: null,
     images: ['/images/LLMBench_1.png', '/images/LLMBench_2.png'],
-    icon: '⚡',
+    icon: Cpu,
   },
 ]
 
