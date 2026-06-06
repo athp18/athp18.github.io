@@ -11,7 +11,6 @@
   padding: 0 30px;
 }
 
-/* Jalpc file-box card style */
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -19,6 +18,7 @@
   justify-content: center;
 }
 
+/* Jalpc file-box card */
 .card {
   display: flex;
   flex-direction: column;
@@ -45,15 +45,21 @@
   font-size: 52px;
   background: var(--gray-bg);
   border-bottom: 1px solid var(--border);
+  transition: background 0.25s;
 }
 
 .cardBody {
   padding: 14px 16px 16px;
-  background: var(--white);
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .cardTitle {
@@ -67,6 +73,18 @@
   color: var(--blue-dark);
 }
 
+.arrow {
+  font-size: 14px;
+  color: var(--text);
+  opacity: 0.5;
+  transition: opacity 0.15s;
+}
+
+.card:hover .arrow {
+  opacity: 1;
+  color: var(--blue);
+}
+
 .cardDesc {
   font-size: 13px;
   line-height: 1.6;
@@ -78,5 +96,29 @@
   font-size: 11px;
   color: var(--text);
   font-family: 'DM Mono', monospace;
-  opacity: 0.75;
+  opacity: 0.7;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 2px;
+}
+
+.tag {
+  font-size: 11px;
+  padding: 2px 8px;
+  background: #FFF8D6;
+  border: 1px solid var(--gold);
+  color: #7a5f00;
+  border-radius: 2px;
+  font-family: 'DM Mono', monospace;
+}
+
+.empty {
+  text-align: center;
+  color: var(--text);
+  padding: 40px 0;
+  font-size: 14px;
 }

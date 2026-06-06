@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import CareerPage from './pages/CareerPage'
 import ProjectsPage from './pages/ProjectsPage'
 import ContactPage from './pages/ContactPage'
+import WritingPage from './pages/WritingPage'
 
 export default function App() {
   const [dark, toggleDark] = useDarkMode()
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/"         element={<Home />} />
         <Route path="/career"   element={<CareerPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/writing"  element={<WritingPage />} />
         <Route path="/contact"  element={<ContactPage />} />
       </Routes>
       <Footer />
