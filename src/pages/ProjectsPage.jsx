@@ -6,6 +6,20 @@ import { GitHubIcon } from '../components/Icons'
 
 const allTags = [...new Set(projects.flatMap(p => p.tags))]
 
+function renderText(text) {
+  return text.split(/(`[^`]+`)/g).map((part, i) =>
+    part.startsWith('`') && part.endsWith('`')
+      ? <code key={i} className={styles.inlineCode}>{part.slice(1, -1)}</code>
+      : part
+  )
+}
+
+function renderParagraphs(text) {
+  return text.split('\n\n').map((para, i) => (
+    <p key={i}>{renderText(para)}</p>
+  ))
+}
+
 export default function ProjectsPage() {
   const [activeTag, setActiveTag] = useState(null)
   const [expanded, setExpanded] = useState(null)
@@ -61,11 +75,11 @@ export default function ProjectsPage() {
                     <div className={styles.detailSections}>
                       <div className={styles.detailSection}>
                         <h4>Overview</h4>
-                        <p>{p.overview}</p>
+                        {renderParagraphs(p.overview)}
                       </div>
                       <div className={styles.detailSection}>
                         <h4>Technical Details</h4>
-                        <p>{p.technical}</p>
+                        {renderParagraphs(p.technical)}
                       </div>
                     </div>
 
