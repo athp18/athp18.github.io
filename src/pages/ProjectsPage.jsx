@@ -15,18 +15,34 @@ const projects = [
     title: 'Bay Area Pathfinder',
     desc: 'Scalable web app on AWS EC2/ECS with React frontend and FastAPI backend. ETL pipelines on real-time traffic data; route accuracy improved 70%+ with GNNs and XGBoost.',
     stack: 'React · FastAPI · AWS · GNN · XGBoost',
-    tags: ['Web', 'ML'],
+    tags: ['Web', 'AI/ML'],
     href: 'https://github.com/athp18/bay-area-pathfinder',
     icon: '',
   },
   {
     title: 'BrewBuddy',
-    desc: 'Mobile app for discovering local coffee shops with a personalized recommendation engine using user preferences, ratings, and real-time location via Yelp API.',
+    desc: 'Mobile app for discovering local coffee shops with an AI-integrated recommendation engine using user preferences, ratings, and real-time location.',
     stack: 'React Native · MongoDB · Node.js',
-    tags: ['Mobile'],
+    tags: ['Mobile', 'Full Stack', 'Web'],
     href: 'https://github.com/athp18/BrewBuddy',
     icon: '',
   },
+  {
+    title: 'Competitive Intelligence',
+    desc: 'A signal ingestion and multi-agent query platform that continuously searches targets by crawling job boards, news, and developer platforms, extracts structured intelligence via LLM, and lets you query the accumulated knowledge base in plain English.',
+    stack: 'FastAPI · PostgreSQL/pgvector · Celery · Next.js · Claude API · Voyage AI',
+    tags: ['AI/ML', 'Full Stack'],
+    href: 'https://github.com/athp18/competitive-intelligence',
+    icon: '',
+  },
+  {                         
+    title: 'Distributed LLM Benchmark',
+    desc: 'A fine-tuning benchmark harness that sweeps training configurations across single-GPU and multi-GPU FSDP setups, measuring throughput, peak memory, and step latency. Covers sharding strategies, gradient checkpointing, and mixed-precision dtypes, with per-step metrics collected at runtime.',                                                                                                                                 
+    stack: 'PyTorch · FSDP · TinyLlama · torchrun · Chart.js',                                                                                                        
+    tags: ['AI/ML', 'Systems'],                             
+    href: 'https://github.com/athp18/llm_bench',                                                                                                                      
+    icon: '',
+  },           
 ]
 
 const allTags = [...new Set(projects.flatMap(p => p.tags))]
