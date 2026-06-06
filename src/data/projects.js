@@ -21,7 +21,7 @@ const projects = [
     overview: '[TODO: Describe the motivation behind the project — what gap in existing routing tools this addresses and what you set out to build.]',
     technical: '[TODO: Explain the system architecture — how the ETL pipeline ingests real-time traffic data, how the GNN and XGBoost models are trained and served, and how the FastAPI backend and React frontend interact.]',
     stack: 'React · FastAPI · AWS · GNN · XGBoost',
-    tags: ['Web', 'AI/ML'],
+    tags: ['Web', 'AI/ML', 'Full Stack'],
     github: 'https://github.com/athp18/bay-area-pathfinder',
     live: null,
     images: [],
