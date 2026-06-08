@@ -59,13 +59,13 @@ export default function Home() {
               <h3>Who am I?</h3>
               <p>
                 I'm a senior at UCLA studying Computer Science, graduating June 2026.
-                I'm interested in ML infrastructure and distributed system, and how these come together to build products that are fast and
+                I'm interested in ML infrastructure and distributed systems, and how these come together to build products that are fast, practical, and
                 built to scale.
               </p>
               <p>
-                Previously interned at <strong>Rivian VW Technologies</strong> (Data Platform &amp; AI)
+                I previously interned at <strong>Rivian VW Technologies</strong> (Data Platform &amp; AI)
                 and worked as a research assistant at <strong>Stanford University's Llorente Lab</strong>,
-                where I built ML pipelines for neuroscience research.
+                where I worked on ML pipelines for neuroscience research.
               </p>
             </div>
             <div className={styles.aboutRight}>

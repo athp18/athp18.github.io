@@ -28,10 +28,10 @@ const jobs = [
 ]
 
 const skills = {
-  'Languages': ['Python', 'C++', 'Java', 'TypeScript', 'SQL', 'Bash', 'R', 'JavaScript', 'C', 'Ruby', 'Matlab'],
+  'Languages': ['Python', 'C++', 'Golang', 'Rust', 'Java', 'TypeScript', 'SQL', 'Bash', 'R', 'JavaScript', 'C', 'Ruby', 'Matlab'],
   'Frontend / Backend': ['React', 'Spring', 'FastAPI', 'Django', 'Flask', 'PostgreSQL', 'MongoDB', 'Node.js',],
-  'Infrastructure': ['Kubernetes', 'Docker', 'AWS', 'Kafka', 'Jenkins', 'GCP', 'Git'],
-  'ML / Data': ['PyTorch', 'TensorFlow', 'JAX', 'NumPy', 'Pandas', 'OpenCV'],
+  'DevOps / Infrastructure': ['Kubernetes', 'Docker', 'AWS', 'Kafka', 'Jenkins', 'GCP', 'Git'],
+  'ML / Data': ['PyTorch', 'TensorFlow', 'JAX', 'Huggingface', 'NumPy', 'Pandas', 'OpenCV'],
 }
 
 export default function CareerPage() {
