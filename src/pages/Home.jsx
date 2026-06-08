@@ -28,7 +28,7 @@ export default function Home() {
         <div className={styles.heroInner}>
           <img src="/images/Headshot.jpg" alt="Atharv Panditrao" className={styles.avatar} />
           <h1 className={styles.heroName}>Atharv Panditrao</h1>
-          <p className={styles.heroTitle}>Software Engineer · Stats & DS @ UCLA</p>
+          <p className={styles.heroTitle}>Software Engineer · CS @ UCLA</p>
           <div className={styles.heroSocials}>
             {socials.map(({ label, href, Icon }) => (
               <a
@@ -58,8 +58,8 @@ export default function Home() {
             <div className={styles.aboutLeft}>
               <h3>Who am I?</h3>
               <p>
-                I'm a senior at UCLA studying Stats & DS, graduating June 2026.
-                I'm interested in ML infrastructure and distributed system — and how these come together to build products that are fast and
+                I'm a senior at UCLA studying Computer Science, graduating June 2026.
+                I'm interested in ML infrastructure and distributed system, and how these come together to build products that are fast and
                 built to scale.
               </p>
               <p>
