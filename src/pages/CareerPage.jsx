@@ -17,11 +17,12 @@ const jobs = [
     company: 'Stanford University - Llorente Lab',
     title: 'Research Assistant',
     date: 'Jun 2023 – Sep 2024',
+    url: 'https://med.stanford.edu/llorente-lab.html',
     current: false,
     bullets: [
-      'Reimplemented MoSeq\'s AR-HMM behavioral segmentation pipeline in JAX, achieving 4–7× inference speedup over NumPy across 70+ sessions and 2.6M+ frames.',
+      'Reimplemented MoSeq\'s AR-HMM behavioral segmentation pipeline in JAX.',
       'Automated calcium imaging workflows on Sherlock HPC via SLURM — motion correction, CNMF-E source extraction, and HDF5 data management across 500+ hours of recordings.',
-      'Built a computer vision pipeline for automated behavioral analysis, cutting manual review time by 90%.',
+      'Built a computer vision pipeline for automated novel object recognition analysis, cutting manual review time by 90%.',
     ],
     tags: ['JAX', 'SLURM', 'HPC', 'PyTorch', 'OpenCV', 'Docker'],
   },
@@ -54,7 +55,7 @@ export default function CareerPage() {
               <div className={styles.timelineContent}>
                 <div className={styles.contentHeader}>
                   <div>
-                    <h3 className={styles.company}>{job.company}</h3>
+                    <h3 className={styles.company}>{job.url ? <a href={job.url} target="_blank" rel="noopener noreferrer" className={styles.link}>{job.company}</a> : job.company}</h3>
                     <p className={styles.role}>{job.title}</p>
                   </div>
                   <span className={styles.date}>{job.date}</span>

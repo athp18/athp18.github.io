@@ -58,8 +58,8 @@ export default function Home() {
             <div className={styles.aboutLeft}>
               <h3>Who am I?</h3>
               <p>
-                I'm a senior at UCLA studying Computer Science, graduating June 2026.
-                I'm interested in ML infrastructure and distributed systems, and how these come together to build products that are fast, practical, and
+                I recently graduated from UCLA with my B.S. in Computer Science.
+                I'm interested in infrastructure and backend development, and how we can build impactful products that are fast, practical, and
                 built to scale.
               </p>
               <p>
