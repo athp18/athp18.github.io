@@ -5,13 +5,14 @@ const jobs = [
     company: 'Rivian VW Technologies',
     title: 'Software Engineering Intern - Data Platform & AI',
     date: 'Jun 2025 – Sep 2025',
-    current: true,
+    current: false,
     bullets: [
       'Built infrastructure observability tooling serving 50+ product services.',
       'Deployed KEDA autoscaling across QA and testing Kubernetes clusters.',
       'Contributed to an internal developer portal consolidating 50+ microservices.',
+      'Designed and implemented a Crossplane-based solution to automate credential lifecycle management declaratively.',
     ],
-    tags: ['Kubernetes', 'Kafka', 'Datadog', 'AWS', 'KEDA'],
+    tags: ['Kubernetes', 'Kafka', 'Bash', 'AWS', 'Crossplane'],
   },
   {
     company: 'Stanford University - Llorente Lab',
@@ -20,11 +21,13 @@ const jobs = [
     url: 'https://med.stanford.edu/llorente-lab.html',
     current: false,
     bullets: [
-      'Reimplemented MoSeq\'s AR-HMM behavioral segmentation pipeline in JAX.',
-      'Automated calcium imaging workflows on Sherlock HPC via SLURM — motion correction, CNMF-E source extraction, and HDF5 data management across 500+ hours of recordings.',
-      'Built a computer vision pipeline for automated novel object recognition analysis, cutting manual review time by 90%.',
+      "Reimplemented MoSeq's AR-HMM behavioral segmentation pipeline in JAX.",
+      'Processed 300+ hours of behavioral video across 15+ experiments, handling MoSeq extraction, PCA, modeling, and downstream analysis.',
+      'Implemented a plugin for synchronized Miniscope calcium imaging and behavioral recordings, enabling multimodal neural-behavioral analysis.',
+      'Automated calcium imaging preprocessing (motion correction, CNMF-E source extraction, and HDF5 data management) across 30+ hours of recordings on Sherlock HPC using SLURM.',
+      'Built a computer vision pipeline for automated novel object recognition analysis, reducing manual review time by 90%.',
     ],
-    tags: ['JAX', 'SLURM', 'HPC', 'PyTorch', 'OpenCV', 'Docker'],
+    tags: ['JAX', 'C++', 'Python', 'PyTorch', 'SLURM', 'OpenCV', 'Docker', 'Pandas', 'NumPy'],
   },
 ]
 
