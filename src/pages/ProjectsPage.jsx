@@ -7,11 +7,14 @@ import { GitHubIcon } from '../components/Icons'
 const allTags = [...new Set(projects.flatMap(p => p.tags))]
 
 function renderText(text) {
-  return text.split(/(`[^`]+`)/g).map((part, i) =>
-    part.startsWith('`') && part.endsWith('`')
-      ? <code key={i} className={styles.inlineCode}>{part.slice(1, -1)}</code>
-      : part
-  )
+  return text.split(/(`[^`]+`|\[[^\]]+\]\([^)]+\))/g).map((part, i) => {
+    if (part.startsWith('`') && part.endsWith('`'))
+      return <code key={i} className={styles.inlineCode}>{part.slice(1, -1)}</code>
+    const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
+    if (link)
+      return <a key={i} href={link[2]} target="_blank" rel="noreferrer">{link[1]}</a>
+    return part
+  })
 }
 
 function renderParagraph(text) {
