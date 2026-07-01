@@ -5,6 +5,7 @@ import projects from '../data/projects'
 import { GitHubIcon } from '../components/Icons'
 
 const allTags = [...new Set(projects.flatMap(p => p.tags))]
+const allLangs = [...new Set(projects.flatMap(p => p.langs))]
 
 function renderText(text) {
   return text.split(/(`[^`]+`|\[[^\]]+\]\([^)]+\))/g).map((part, i) => {
@@ -36,11 +37,13 @@ function renderParagraphs(text) {
 
 export default function ProjectsPage() {
   const [activeTag, setActiveTag] = useState(null)
+  const [activeLang, setActiveLang] = useState(null)
   const [expanded, setExpanded] = useState(null)
 
-  const filtered = activeTag
-    ? projects.filter(p => p.tags.includes(activeTag))
-    : projects
+  const filtered = projects.filter(p =>
+    (!activeTag || p.tags.includes(activeTag)) &&
+    (!activeLang || p.langs.includes(activeLang))
+  )
 
   const toggle = (slug) => setExpanded(prev => prev === slug ? null : slug)
 
@@ -52,7 +55,10 @@ export default function ProjectsPage() {
           <h1>My Projects</h1>
         </div>
 
-        <TagFilter tags={allTags} active={activeTag} onSelect={setActiveTag} />
+        <TagFilter groups={[
+          { label: 'Domain', tags: allTags, active: activeTag, onSelect: setActiveTag },
+          { label: 'Language', tags: allLangs, active: activeLang, onSelect: setActiveLang },
+        ]} />
 
         <div className={styles.grid}>
           {filtered.map(p => {
