@@ -56,7 +56,7 @@ export default function ProjectsPage() {
         </div>
 
         <TagFilter groups={[
-          { label: 'Domain', tags: allTags, active: activeTag, onSelect: setActiveTag },
+          { label: 'A', tags: allTags, active: activeTag, onSelect: setActiveTag },
           { label: 'Language', tags: allLangs, active: activeLang, onSelect: setActiveLang },
         ]} />
 

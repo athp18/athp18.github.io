@@ -4,6 +4,13 @@ import TagFilter from '../components/TagFilter'
 
 // Add posts here. Set href to a URL when the post is published, or null to show "Coming Soon".
 const posts = [
+  {
+    title: 'Tokyo',
+    date: 'Jul 2026',
+    tags: ['Travel'],
+    desc: 'A few photos and moments from my time in Tokyo.',
+    href: '#/writing/tokyo',
+  },
   // {
   //   title: 'Building a Redis-Inspired KV Store in C++',
   //   date: 'Jun 2026',
@@ -31,7 +38,7 @@ export default function WritingPage() {
         </div>
 
         {posts.length > 0 && (
-          <TagFilter tags={allTags} active={activeTag} onSelect={setActiveTag} />
+          <TagFilter groups={[{ label: 'Topic', tags: allTags, active: activeTag, onSelect: setActiveTag }]} />
         )}
 
         {filtered.length === 0 ? (
@@ -67,8 +74,13 @@ function PostRow({ post }) {
 
   if (!post.href) return <div className={styles.itemWrap}>{inner}</div>
 
+  const isInternal = post.href.startsWith('#/')
   return (
-    <a href={post.href} target="_blank" rel="noreferrer" className={`${styles.itemWrap} ${styles.itemLink}`}>
+    <a
+      href={post.href}
+      {...(!isInternal && { target: '_blank', rel: 'noreferrer' })}
+      className={`${styles.itemWrap} ${styles.itemLink}`}
+    >
       {inner}
     </a>
   )

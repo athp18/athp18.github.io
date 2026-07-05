@@ -1,0 +1,133 @@
+.page {
+  padding-top: 60px;
+  padding-bottom: 80px;
+  background: var(--white);
+  transition: background 0.25s;
+  min-height: calc(100vh - 60px);
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+.tag {
+  font-size: 11px;
+  padding: 2px 8px;
+  background: #FFF8D6;
+  border: 1px solid var(--gold);
+  color: #7a5f00;
+  border-radius: 2px;
+  font-family: 'DM Mono', monospace;
+}
+
+.date {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--text);
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 100;
+  color: var(--text-dark);
+  margin-bottom: 28px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.body p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text);
+}
+
+/* Photo grid — 2 col by default, captions go full-width */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.figure {
+  margin: 0;
+}
+
+.figure.full {
+  grid-column: 1 / -1;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+}
+
+.figure.full .img {
+  max-height: 520px;
+  object-position: center;
+}
+
+.caption {
+  font-size: 12px;
+  color: var(--text);
+  font-style: italic;
+  margin-top: 6px;
+  text-align: center;
+}
+
+/* Spotify link */
+.music {
+  border-top: 1px solid var(--border);
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.musicLabel {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.videoWrap {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 2px;
+}
+
+@media (max-width: 520px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .figure.full {
+    grid-column: auto;
+  }
+}
